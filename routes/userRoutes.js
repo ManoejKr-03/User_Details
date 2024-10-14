@@ -29,7 +29,8 @@ router.get('/:userEmail/applications', async (req, res) => {
 
 router.get('/jobs', async (req, res) => {
     try {
-        const response = await axios.get('http://jobs-microservice-url/api/jobs'); // Replace with the actual URL of your jobs microservice
+        const response = await axios.get('http://new-jobs-microservice-url/api/jobs');
+ 
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: 'Failed to fetch jobs', details: error.message });
